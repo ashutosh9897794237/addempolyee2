@@ -5,32 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
+    
 </head>
 <body>
     <div class="container">
     <div class="new">
-      <h2>  Student Manegment CRUD </h2>
+     <h1>Student Management CRUD</h1>
     </div><br>
     <form onsubmit="Employee()" class="form" id="form">
-       <div> Enter Name <br><br>
-       <input type="text" id="name">
-    </div>
-     <div> Enter Profession <br><br>
-       <input type="text" placeholder="Example" id="profession">
-    </div>
-     <div> Enter Age <br><br>
-       <input type="number" placeholder="00" id="age">
+       <div class="detail">  
+       <input type="text" id="name" placeholder="Name">
+    
+     <!--<div> Enter Profession <br><br>
+       <input type="text" placeholder="Example" id="profession">-->
+       <input type="email" id="email" placeholder="Email">
+       <input type="number" id="gpa" placeholder="GPA">
+
+    </div> <br>
+
+
+    <p id="demo"></p>
+
+     <div> 
+       <input type="number"  id="Age" placeholder="Age">
+       <input type="name"  id="Degree" placeholder="Degree">
     </div>
     </form>
     <br><br>
-    <button type="submit" id="Add">Add User</button>
+    <div class="but"><button type="submit" id="Add">Add Student</button></div> <br><br>
     <table>
         <thead>
             <tr class="row">
+                <!--<th>Id</th>-->
                 <th>name</th>
-                <th>profession</th>
-                <th>age</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>GPA</th>
+                <th>Degree</th>
             </tr>
         </thead>
         <tbody></tbody>
