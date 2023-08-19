@@ -1,0 +1,33 @@
+.container{
+    margin-left: 5%;
+}
+.new{
+    left: 5%;
+    margin-left: 5%;
+}
+.form{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.Add{
+    margin-left: 5%;
+    left: 5%;
+}
+tr{
+    justify-content: 1000px space-between;
+    display: flex;
+    position: relative;
+}
+th{
+    justify-content: 500px space-between;
+}
+td{
+    justify-content: 500px space-between;
+}
+table,th,td{
+    border: 1px solid black;
+    padding: 5px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="new">
+      <h2>  Student Manegment CRUD </h2>
+    </div><br>
+    <form onsubmit="Employee()" class="form" id="form">
+       <div> Enter Name <br><br>
+       <input type="text" id="name">
+    </div>
+     <div> Enter Profession <br><br>
+       <input type="text" placeholder="Example" id="profession">
+    </div>
+     <div> Enter Age <br><br>
+       <input type="number" placeholder="00" id="age">
+    </div>
+    </form>
+    <br><br>
+    <button type="submit" id="Add">Add User</button>
+    <table>
+        <thead>
+            <tr class="row">
+                <th>name</th>
+                <th>profession</th>
+                <th>age</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    </div>
+     <script src="script.js"></script>
+</body>
+</html>
