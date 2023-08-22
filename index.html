@@ -33,7 +33,13 @@ table,th,td{
 display: flex;    
 justify-content: space-between;	
 }
+.bt{
+	left: 20px;
+}
 .but{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
     margin-left: 70px;
     left: 70px;
     width: 100px;
@@ -85,7 +91,7 @@ justify-content: space-between;
 		<input type="text"
 			id="degree"
 			placeholder="Enter your Degree">
-		<button onclick="addData()">
+		<button onclick="addData()" id="bt">
 			Add
 		</button>
 	</div><br>
@@ -93,6 +99,7 @@ justify-content: space-between;
     <br><br>
 	<table id="outputTable">
 		<tr>
+			<th>Serial Number</th>
 			<th>Name</th>
 			<th>Email</th>
 			<th>GPA</th>
@@ -101,6 +108,7 @@ justify-content: space-between;
 		</tr>
 	</table>
 	<script>
+		let Serialnumber=1;
 		function addData() {
 			// Get input values
 			let name =
@@ -119,12 +127,13 @@ justify-content: space-between;
 			let newRow = table.insertRow(table.rows.length);
 			
 			// Insert data into cells of the new row
-			newRow.insertCell(0).innerHTML = name;
-			newRow.insertCell(1).innerHTML = email;
-			newRow.insertCell(2).innerHTML = GPA;
-			newRow.insertCell(3).innerHTML = Age;
-			newRow.insertCell(4).innerHTML = Degree;
-			newRow.insertCell(5).innerHTML = 
+			newRow.insertCell(0).innerHTML = Serialnumber++;
+			newRow.insertCell(1).innerHTML = name;
+			newRow.insertCell(2).innerHTML = email;
+			newRow.insertCell(3).innerHTML = GPA;
+			newRow.insertCell(4).innerHTML = Age;
+			newRow.insertCell(5).innerHTML = Degree;
+			newRow.insertCell(6).innerHTML = 
 				'<button onclick="editData(this)">Edit</button>'+
 				'<button onclick="deleteData(this)">Delete</button>';
 			
@@ -132,6 +141,7 @@ justify-content: space-between;
 			clearInputs();
 		}
 
+	
 		function editData(button) {
 			
 			// Get the parent row of the clicked button
